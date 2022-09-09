@@ -1,13 +1,23 @@
-#include<unistd.h>
-#include<stdlib.h>
-#include<stdio.h>
+ <stdlib.h>
+ <time.h>
+
 /**
  * main - Entry point
- * Return: Always 0 (Success)
+ *
+ * Return: 0
  */
 int main(void)
 {
-	write(1, "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n", 59);
-	system("rm barhamounafissa > sorti 2>&1");
-	exit(1);
+	int n;
+
+	srand(time(0));
+	n = rand() - RAND_MAX / 2;
+	/* your code goes there */
+	if (n > 0)
+		printf("%d is positive\n", n);
+	else if (n == 0)
+		printf("%d is zero\n", n);
+	else
+		printf("%d is negative\n", n);
+	return (0);
 }
